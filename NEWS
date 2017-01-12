@@ -1,0 +1,8 @@
+stampr 0.1
+=================
+* 03-10-2014 -  Changed names of STAMP event types to all be minimum 4 charachters e.g., STBL.
+             -  Fixed problem when T1 (T2) poly contains T2 (T1) poly.
+             -  Added argument 'drop_lower_td=TRUE' to calls to gIntersection and gDifference.
+
+* 13-05-2014 -  Changed FRAC, SHPI shape indexes to proper vector formulae.
+* 13-12-2016 -  Upgrade for JSS submissiona and CRAN. Documentation fixes.
