@@ -20,4 +20,3 @@ plot(fire2,border=2,add=TRUE)
 }
 \keyword{datasets,}
 \keyword{testing}
-

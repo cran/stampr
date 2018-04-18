@@ -16,11 +16,10 @@ package \code{sp}. Polygon relationships are still understudied in the field of
 geographic information science, but hopefully \code{stampr} can provide users with a
 platform for new developments and applied research looking at interesting geographical phenomena.
 }
-\author{
-Jed Long and Colin Robertson
-}
 \references{
 Robertson, C., Nelson, T., Boots, B., and Wulder, M. (2007) STAMP: Spatial-temporal analysis of moving polygons.
  \emph{Journal of Geographical Systems}, 9:207-227.
 }
-
+\author{
+Jed Long and Colin Robertson
+}

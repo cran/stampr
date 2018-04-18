@@ -70,4 +70,3 @@ Robertson, C., Nelson, T., Boots, B., and Wulder, M. (2007) STAMP: Spatial-tempo
 stamp.direction stamp.distance stamp.shape stamp.map stamp.group.summary
 }
 \keyword{stamp}
-

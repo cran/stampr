@@ -23,4 +23,3 @@ plot(mpb,border=2,add=TRUE)
 Nelson TA, Boots B, Wulder MA, Carroll AL. Environmental characteristics of mountain pine beetle infestation hot spots. \emph{Journal of Ecosystems and Management}. 2007 Mar 14;8(1).
 }
 \keyword{datasets}
-

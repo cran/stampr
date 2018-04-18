@@ -40,4 +40,3 @@ STGroup <- stamp.stgroup.summary(ch)
 head(STGroup)
 }
 \keyword{stamp}
-

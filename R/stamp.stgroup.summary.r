@@ -27,7 +27,7 @@
 #' ch <- stamp.multichange(katrina, changeByRow = TRUE, dc = 0, distance = TRUE, direction = FALSE)
 #' STGroup <- stamp.stgroup.summary(ch)
 #' head(STGroup)
-#' 
+#'
 #' @export
 
 #
@@ -36,11 +36,12 @@
 stamp.stgroup.summary <- function(stmp,area=TRUE,count=TRUE){
   grps <- unique(stmp$STGROUP)
   outdf <- data.frame(STGROUP=grps,nEVENTS=0,AREA=0)
-  evnts <- c("CONV","CONC","CONT","DISP1","DISA","STBL","EXPN","FRAG","DIVR","DISP2","GENA")
+  evnts <- c("CONV","CONC","CONT","DISP1","DISA","STBL","EXPN","FRAG","DIVR","DISP2","GENR")
   for (i in 1:length(grps)){
       ind1 <- which(stmp$STGROUP == grps[i])
       outdf$nEVENTS[i] <- length(ind1)
       outdf$AREA[i] <- sum(stmp$AREA[ind1])
+      outdf$TGROUP[i] <- min(stmp$TGROUP[ind1])
       }
   if (count==TRUE){
     nevnts <- paste("n",evnts,sep="")

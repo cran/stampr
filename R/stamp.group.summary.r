@@ -28,7 +28,7 @@
 stamp.group.summary <- function(stmp,area=TRUE,count=TRUE){
   grps <- unique(stmp$GROUP)
   outdf <- data.frame(GROUP=grps,nEVENTS=0,AREA=0)
-  evnts <- c("CONV","CONC","CONT","DISP1","DISA","STBL","EXPN","FRAG","DIVR","DISP2","GENA")
+  evnts <- c("CONV","CONC","CONT","DISP1","DISA","STBL","EXPN","FRAG","DIVR","DISP2","GENR")
   for (i in grps){
       ind1 <- which(stmp$GROUP == i)
       outdf$nEVENTS[i] <- length(ind1)

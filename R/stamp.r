@@ -105,7 +105,8 @@ stamp <- function(T1, T2, dc=0, direction=FALSE, distance=FALSE, ...){
   
   res1 <- res[!sapply(res, is.null)]
   pD1 <- NULL
-  if (!is.null(res1)){
+  #if (!is.null(res1)){
+  if (length(res1)>0){
     out1 <- do.call("rbind", res1)
     pD1 <- SpatialPolygonsDataFrame(as(out1,"SpatialPolygons"), data=dfD1, match.ID = FALSE)
     pD1$LEV1 <- "DISA"
@@ -133,7 +134,8 @@ stamp <- function(T1, T2, dc=0, direction=FALSE, distance=FALSE, ...){
   
   res1 <- res[!sapply(res, is.null)]
   pD2 <- NULL
-  if (!is.null(res1)){
+  #if (!is.null(res1)){
+  if (length(res1) > 0){
     out1 <- do.call("rbind", res1)
     pD2 <- SpatialPolygonsDataFrame(as(out1,"SpatialPolygons"), data=dfD2, match.ID = FALSE)
     pD2$LEV1 <- "GENR"
@@ -155,12 +157,14 @@ stamp <- function(T1, T2, dc=0, direction=FALSE, distance=FALSE, ...){
   stmp$LEV2[which(stmp$LEV1 == "GENR" & stmp$ID2 %in% id.stab2)] <- "EXPN"
 
   #Delineate contiguous bases for groups
+  stmp$TMP <- 1
+  if(length(stmp) > 1) {
   nbl <- poly2nb(stmp)
   for(i in 1:length(stmp)) {
     nbl[[i]] <- c(unlist(nbl[i]), i)
     }
   stmp$TMP <- n.comp.nb(nbl)$comp.id
-
+  }
   #Label all other LEV2 movement types...
   gdInd <- which(stmp$LEV2 == "GENR" | stmp$LEV2 == "DISA")
   tempLev <- stmp$LEV2

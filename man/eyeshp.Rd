@@ -22,4 +22,3 @@ data("eyeshp")
 plot(eyeshp)
 }
 \keyword{datasets}
-
