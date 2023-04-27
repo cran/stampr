@@ -4,21 +4,22 @@
 \name{eyeshp}
 \alias{eyeshp}
 \title{Hurricane Katrina eye point dataset}
-\format{A \code{SpatialPointsDataFrame} with 33 records of of the location of Hurricane Katrina, every 
+\format{
+A \code{sf} object with 33 records of the eye location of Hurricane Katrina, every 
  3 hrs, from 21:00 25-AUG-2005 to 21:00 29-AUG-2005. The date and time of each polygon is recorded in the
- column \code{DateTime}.}
+ column \code{DateTime}.
+}
 \description{
 A dataset containing points representing the eye of Hurricane Katrina centroid from 21:00 26-AUG-2005 to 
 21:00 29-AUG-2005. Polygon contours were extracted from the US NOAA H*Wind product, downloadable from:
-\url{http://www.aoml.noaa.gov/hrd/data_sub/wind.html}
+\url{https://www.aoml.noaa.gov/hrd/data_sub/wind.html}
 }
 \details{
 The \code{eyeshp} dataset contains points that were derived from the raw NOAA H*Wind data. The data is included here
 to provide a point-data comparison to the data in the \code{katrina} dataset which is polygon data
 }
 \examples{
-library(sp)
-data("eyeshp")
+data(eyeshp)
 plot(eyeshp)
 }
 \keyword{datasets}

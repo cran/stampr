@@ -7,9 +7,9 @@
 glob.change(T1, T2)
 }
 \arguments{
-\item{T1}{a \code{SpatialPolygonsDataFrame} object of polygons from time 1.}
+\item{T1}{a \code{sf} object of polygons from time 1.}
 
-\item{T2}{a \code{SpatialPolygonsDataFrame} object of polygons from time 2.}
+\item{T2}{a \code{sf} object of polygons from time 2.}
 }
 \value{
 A \code{list} object with three elements - Results for the \code{NumRatio}, \code{AreaRatio}, and \code{AvgAreaRatio} metrics.
